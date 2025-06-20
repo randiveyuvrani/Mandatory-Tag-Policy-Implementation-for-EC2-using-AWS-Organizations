@@ -43,87 +43,81 @@ This project demonstrates how to **enforce mandatory tags** during the launch of
 
 ---
 
-## 📄 Sample JSON: EC2 Tag Policy
-
-```json
-{
-  "tags": {
-    "name": {
-      "enforced_for": ["ec2:instance"]
-    },
-    "emailid": {
-      "enforced_for": ["ec2:instance"]
-    },
-    "phoneno": {
-      "enforced_for": ["ec2:instance"]
-    },
-    "place": {
-      "enforced_for": ["ec2:instance"]
-    }
-  }
-}
-
-
 ## 📸 Screenshots
-
 Below are the key screenshots captured during the implementation of this project:
 
-| 📷 Step | Description |
-|--------|-------------|
-| ✅ **1.** | Creation of AWS Organization |
-| ✅ **2.** | Enabling Service Control Policies |
-| ✅ **3.** | Creation of EC2 Mandatory Tag Policy |
-| ✅ **4.** | Attaching Tag Policy to the AWS Account |
-| ✅ **5.** | Additional Tags Attached While EC2 Launch |
-| ✅ **6.** | EC2 Instance Launch Attempt with Incorrect Tag (`Name` instead of `name`) |
-| ✅ **7.** | EC2 Instance Launch Error (Tag Policy Enforcement Worked) |
-| ✅ **8.** | Successful EC2 Launch with All Required Tags |
-| ✅ **9.** | Running EC2 Instance Screenshot |
-| ✅ **10.** | Final Completion of the Project with Tag Policy in Effect |
+📷 Step	Description
+✅ 1.	Creation of AWS Organization
+✅ 2.	Enabling Service Control Policies
+✅ 3.	Creation of EC2 Mandatory Tag Policy
+✅ 4.	Attaching Tag Policy to the AWS Account
+✅ 5.	Additional Tags Attached While EC2 Launch
+✅ 6.	EC2 Instance Launch Attempt with Incorrect Tag (Name instead of name)
+✅ 7.	EC2 Instance Launch Error (Tag Policy Enforcement Worked)
+✅ 8.	Successful EC2 Launch with All Required Tags
+✅ 9.	Running EC2 Instance Screenshot
+✅ 10.	Final Completion of the Project with Tag Policy in Effect
 
-📝 _You can find these screenshots inside the `screenshots/` folder of this repository._
+📝 You can find these screenshots inside the screenshots/ folder of this repository.
 
----
+📁 Folder Structure
+📦 aws-ec2-tag-enforcement
+┣ 📂 screenshots
+┃ ┣ 1-org-created.png
+┃ ┣ 2-scp-enabled.png
+┃ ┣ 3-tag-policy-created.png
+┃ ┣ 4-policy-attached.png
+┃ ┣ 5-ec2-tag-added.png
+┃ ┣ 6-name-tag-error.png
+┃ ┣ 7-tag-error-message.png
+┃ ┣ 8-launch-success.png
+┃ ┣ 9-instance-running.png
+┃ ┗ 10-project-completed.png
+┣ 📄 README.md
+┣ 📄 ec2-tag-policy.json
+┗ 📄 report.md or report.pdf
 
-## 🧠 Learnings
+🧠 Learnings
+Enforced tagging standards using AWS Tag Policies
 
-- Learned how to enforce organizational tagging policies using **AWS Tag Policies**
-- Understood the **case sensitivity** involved in tag key enforcement
-- Explored how **Service Control Policies (SCPs)** can restrict EC2 instance launches
-- Identified challenges in SCP attachment and used a fallback approach with tag policies
-- Gained hands-on experience in **governance, compliance, and cost control** strategies using AWS native tools
+Understood the importance of case-sensitive key enforcement
 
----
+Explored Service Control Policies (SCPs) and their limitations
 
-## 🛡 Tech Stack
+Used tag policies for resource governance and compliance
 
-- **Amazon EC2** – Launching and testing virtual instances
-- **AWS Organizations** – Setting up policies across accounts
-- **Tag Policies** – Enforcing tagging compliance for EC2 instances
-- **Service Control Policies (SCPs)** – Optional attempt to block unauthorized EC2 launches
-- **IAM Policies (Optional)** – Evaluated for permission-based controls
-- **AWS Management Console** – End-to-end configuration
-- **Markdown / GitHub** – For reporting and documentation
+Managed EC2 instances with automated tag validation
 
----
+🛡 Tech Stack
+Amazon EC2
 
-## 🏁 Final Output
+AWS Organizations
 
-- ✅ Successfully launched EC2 instances with **all mandatory tags**
-- ❌ Attempted EC2 launches without required tags were **blocked or errored** as expected
-- 🛡 Organizational tag enforcement was demonstrated using **Tag Policies**
-- 🎯 Project demonstrates a **real-world use case** of cloud resource governance using native AWS features
+Tag Policies
 
----
+Service Control Policies (SCP)
 
-## 📌 Author
+IAM
 
-**👩‍💻 Yuvrani Randive**
+AWS Management Console
 
-- 🎓 Electronics & Telecommunication Engineering Graduate  
-- 🌐 [LinkedIn Profile](https://www.linkedin.com/in/yuvranirandive)  
-- 📧 yuvranirandive1@gmail.com  
-- 💡 Passionate about Cloud Computing, DevOps, and Cloud Governance
+GitHub + Markdown for documentation
+
+🏁 Final Output
+✅ EC2 instance successfully launched with required tags
+
+❌ Launches without tags were blocked, verifying policy enforcement
+
+🎯 Demonstrated effective AWS cloud governance via tag policy compliance
+
+📌 Author
+👩‍💻 Yuvrani Randive
+🎓 Electronics & Telecommunication Engineering Graduate
+🌐 LinkedIn
+📧 yuvranirandive1@gmail.com
+💡 Passionate about Cloud Computing, DevOps, and AWS Governance
+
+
 
 ---
 
