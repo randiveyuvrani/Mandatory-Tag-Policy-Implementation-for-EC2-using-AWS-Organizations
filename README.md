@@ -1,0 +1,2 @@
+# Mandatory-Tag-Policy-Implementation-for-EC2-using-AWS-Organizations
+This project demonstrates how to **enforce mandatory tags** during the launch of EC2 instances using **AWS Organizations**, **Tag Policies**, and **Service Control Policies (SCPs)**. It ensures governance, accountability, and cost management across AWS accounts by blocking EC2 instance creation without the required metadata tags.
